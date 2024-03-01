@@ -12,7 +12,21 @@ const getTest=(req,res)=>{
 
 const postCreateUser=(req,res)=>
 {
-    res.send('create user')
+    // console.log(req.body)
+    let email=req.body.Mail;
+    let name=req.body.myname;
+    let city=req.body.City;
+    // console.log("email:",email,"name:",name,"city:",city)
+    connection.query(
+       ` INSERT INTO 
+        User (email, name, city)
+        VALUES(?,?,?)`,
+        [email,name,city],
+        function(err,result){
+            console.log(result);
+            res.send('created user succeed!')
+        }
+    );
 }
 module.exports={
     getHomepage,
