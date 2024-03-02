@@ -19,17 +19,6 @@ configViewEngine(app);
 // Khai báo route
 app.use('/',webRoutes)
 
-
-
-
-// simple query
-connection.query(
-  'SELECT * FROM User',
-  function(err, result,fields)
-  {
-    console.log(result);
-  }
-);
 app.listen(port,hostname, () => {
   console.log(`Example app listening on port ${port}`)
 })

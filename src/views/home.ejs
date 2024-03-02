@@ -6,21 +6,70 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
+<style>
+    .tablecontainer{
+        padding: 15px 20px;
+    }
+    .title{
+        font-size: 25px;
+        font-weight: 600;
+        padding-bottom: 10px;
+    }
+    table{
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th,td{
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    tr:hover{
+        background-color: #ccc;
+    }
+</style>
 <body>
-    <div class="topnav">
-        <a href="#home" class="active">Home</a>
-        <a href="#new">New</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+    <div class="topnav">    
+        <a href="/" class="active">Home</a>
+        <a href="/create">Create User</a>      
     </div>
-    <div class="form-add-news">
+    <div class="table-container">
+        <div class="title">List User</div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>phucvy107@gmail.com</th>
+                <th>Phúc Vy</th>
+                <th>Long AN</th>
+                <th>
+                    <button>Edit</button>
+                    <button>Delete</button>
+                </th>
+            </tr>
+            <tr>
+                <th>2</th>
+                <th>phong@gmail.com</th>
+                <th>Phong</th>
+                <th>Ninh Thuận</th>
+            </tr>
+        </table>
+    </div>
+    
+    <!-- <div class="form-add-news">
         <form action="/create-user" method="POST">
             <fieldset>
             <legend>Form add new users</legend>
             <div class="input-group">
-                <label>Email:</label>
+                <label>Email:</label>       
                 <input type="text" name="Mail">
-            </div>
+            </div>  
             <div class="input-group">
                 <label>Name:</label>
                 <input type="text" name="myname">
@@ -34,6 +83,6 @@
             </div>
             </fieldset>
         </form>
-    </div>
+    </div> -->
 </body>
 </html>
