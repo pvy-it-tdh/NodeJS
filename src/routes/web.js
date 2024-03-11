@@ -1,6 +1,6 @@
 const express=require('express');
 const router=express.Router();
-const {getHomepage, getTest, getPhucVy,postCreateUser,getCreate}=require('../controllers/homeController')
+const {getHomepage, getTest, getPhucVy,postCreateUser,getCreate,getUpdatePage}=require('../controllers/homeController')
 
 
   router.get('/',getHomepage);
@@ -8,4 +8,5 @@ const {getHomepage, getTest, getPhucVy,postCreateUser,getCreate}=require('../con
   router.get('/test', getTest);
   router.post('/create-user',postCreateUser);
   router.get('/create',getCreate)
+  router.get('/update/:id',getUpdatePage)
   module.exports=router;
